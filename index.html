@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>选一条自己喜欢的语录吧</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="iconfont.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   <script type="text/javascript" src="data.js"></script>
 </head>
@@ -14,13 +15,13 @@
 <body>
   <div id="ana_box" class="container-fluid">
     <div id="ana_content">
-      <i class="fa fa-quote-left fa-3x pull-left"></i>
+      <i class="iconfont icon-quotation" ></i>
       <b id="ana_text"></b>
       <p id="ana_from"></p>
     </div>
     <div>
-      <a target="_blank" href="" id="share_qq"><i class="fa fa-qq fa-2x"></i></a>
-      <a target="_blank" href="" id="share_weibo"><i class="fa fa-weibo fa-2x"></i></a>
+      <a target="_blank" href="" id="share_qq"><i class="iconfont icon-QQ"></i></a>
+      <a target="_blank" href="" id="share_weibo"><i class="iconfont icon-weibo"></i></a>
       <button id="random" onclick="randomAna()">换一句</button>
     </div>
   </div>
@@ -51,12 +52,12 @@ function randomAna() {
     document.getElementById("ana_text").innerHTML = now_ana[0];
     document.getElementById('ana_from').innerHTML = now_ana[1];
     document.getElementById('share_qq').href =
-      "http://connect.qq.com/widget/shareqq/index.html?url=https://codepen.io/flamebird/full/wEjRrQ&sharesource=qzone&title=今日语录&pics=http://agzy.youth.cn/mzh/jng/mzd/yrxm/200906/W020090622604810135030.JPG&summary=【教员每日语】" +
+      "http://connect.qq.com/widget/shareqq/index.html?url=https://codepen.io/flamebird/full/wEjRrQ&sharesource=qzone&title=今日语录&pics=https://wx1.sinaimg.cn/mw2000/007p25GDly1fyjfpxhsxij31040m8k6y.jpg&summary=【教员每日语】" +
       now_ana[0];
     document.getElementById('share_weibo').href =
       "https://service.weibo.com/share/share.php?url=https://codepen.io/flamebird/full/wEjRrQ&title=【今日语录】" +
       now_ana[0].substr(0, 140) +
-      "&pic=http://agzy.youth.cn/mzh/jng/mzd/yrxm/200906/W020090622604810135030.JPG&appkey=63777731&display=0";
+      "&pic=https://wx1.sinaimg.cn/mw2000/007p25GDly1fyjfpxhsxij31040m8k6y.jpg&appkey=63777731&display=0";
   } else {
     alert("内容循环完毕！想看更多请读选集、思想万岁等！");
     shuffle();
