@@ -34,8 +34,7 @@ var decrypt= CryptoJS.AES.decrypt(encrypt, CryptoJS.enc.Utf8.parse(aseKey), {
   padding: CryptoJS.pad.Pkcs7
 }).toString(CryptoJS.enc.Utf8);
 var anas = JSON.parse(decrypt) 
-console.log(anas)
-var colors = ["#BF402C", "#F09800", "#752A5E", "#CCA9BA", "#6B4D6B", ""]
+var colors = ["#BF402C", "#F09800", "#752A5E", "#B77796", "#6B4D6B", "#5b8c4e"]
 
 var tem_anas = [];
 window.onload = shuffle;
@@ -56,14 +55,14 @@ function randomAna() {
       now_ana[0];
     document.getElementById('share_weibo').href =
       "https://service.weibo.com/share/share.php?url=https://maoana.vercel.app&title=【今日语录】" +
-      now_ana[0].substr(0, 140) +
+      now_ana[0].substr(0, 122) +
       "&pic=https://wx1.sinaimg.cn/mw2000/007p25GDly1fyjfpxhsxij31040m8k6y.jpg&appkey=63777731&display=0";
   } else {
     alert("内容循环完毕！想看更多请读选集、思想万岁等！");
     shuffle();
     return;
   }
-  let color_index = Math.floor(Math.random() * 5);
+  let color_index = Math.floor(Math.random() * 6);
   document.body.style.backgroundColor = colors[color_index];
   document.getElementById('random').style.backgroundColor = colors[color_index];
   document.getElementById('ana_content').style.color = colors[color_index];
