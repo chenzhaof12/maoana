@@ -15,7 +15,7 @@
 <body>
   <div id="ana_box" class="container-fluid">
     <div id="ana_content">
-      <i class="iconfont icon-quotation" ></i>
+      <i class="iconfont icon-quotation"></i>
       <b id="ana_text"></b>
       <p id="ana_from"></p>
     </div>
@@ -48,7 +48,7 @@ function shuffle() {
 function randomAna() {
   if (tem_anas.length > 0) {
     let now_ana = tem_anas.pop();
-    document.getElementById("ana_text").innerHTML = now_ana[0];
+    document.getElementById("ana_text").innerHTML = now_ana[0].split('\n').join('<br><br><i class="iconfont icon-quotation"></i>');
     document.getElementById('ana_from').innerHTML = now_ana[1];
     document.getElementById('share_qq').href =
       "http://connect.qq.com/widget/shareqq/index.html?url=https://maoana.vercel.app&sharesource=qzone&title=今日语录&pics=https://wx1.sinaimg.cn/mw2000/007p25GDly1fyjfpxhsxij31040m8k6y.jpg&summary=【教员每日语】" +
